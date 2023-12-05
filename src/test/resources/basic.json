@@ -1,0 +1,11 @@
+{
+  "dtId": "ambulance",
+  "eventType": "UPDATE",
+  "eventDateTime": "2023-12-05T16:37:22.3253204+00:00",
+  "properties": {
+    "fuel_level": 3.4,
+    "is_busy": true,
+    "name": "ambulance I"
+  },
+  "relationships": []
+}

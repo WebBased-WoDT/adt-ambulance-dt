@@ -29,8 +29,9 @@ repositories {
 }
 
 dependencies {
-    implementation(libs.kotlin.stdlib)
+    implementation(libs.kotlin.coroutines)
     implementation(libs.kotlin.serialization.json)
+    implementation(libs.kotlin.stdlib)
     implementation(libs.signalr)
     testImplementation(libs.bundles.kotlin.testing)
 }

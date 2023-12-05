@@ -28,9 +28,9 @@ import kotlinx.serialization.json.Json
 class ADTPresentationTest : StringSpec({
 
     "A simple Digital twin delete event should be deserialized" {
-        readResourceFile("emptyDelete.json")?.apply {
+        readResourceFile("emptyDelete.json")?.let {
             shouldNotThrow<Exception> {
-                val event = Json.decodeFromString<DigitalTwinUpdate>(this)
+                val event = Json.decodeFromString<DigitalTwinUpdate>(it)
                 event shouldNotBe null
                 event.eventType shouldBe DigitalTwinEventType.DELETE
             }
@@ -38,9 +38,9 @@ class ADTPresentationTest : StringSpec({
     }
 
     "A Digital twin update event with status composed by only properties should be deserialized" {
-        readResourceFile("basic.json")?.apply {
+        readResourceFile("basic.json")?.let {
             shouldNotThrow<Exception> {
-                val event = Json.decodeFromString<DigitalTwinUpdate>(this)
+                val event = Json.decodeFromString<DigitalTwinUpdate>(it)
                 event shouldNotBe null
                 event.eventType shouldBe DigitalTwinEventType.UPDATE
                 event.properties.size shouldNotBe 0
@@ -49,9 +49,9 @@ class ADTPresentationTest : StringSpec({
     }
 
     "A Digital twin update event with status composed by properties and relationships should be deserialized" {
-        readResourceFile("withRelationships.json")?.apply {
+        readResourceFile("withRelationships.json")?.let {
             shouldNotThrow<Exception> {
-                val event = Json.decodeFromString<DigitalTwinUpdate>(this)
+                val event = Json.decodeFromString<DigitalTwinUpdate>(it)
                 event shouldNotBe null
                 event.eventType shouldBe DigitalTwinEventType.UPDATE
                 event.properties.size shouldNotBe 0

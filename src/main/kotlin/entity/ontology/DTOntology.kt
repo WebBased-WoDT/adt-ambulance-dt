@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package ontology.entity
+package entity.ontology
 
 /**
  * It models the ontology followed by the Digital Twin.

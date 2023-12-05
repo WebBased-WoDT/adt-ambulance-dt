@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package ontology.entity
+package entity.ontology
 
 /**
  * It models the concept of RDF node in the context of a Digital Twin Knowledge Graph.

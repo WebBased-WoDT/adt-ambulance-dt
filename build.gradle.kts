@@ -32,7 +32,9 @@ dependencies {
     implementation(libs.kotlin.coroutines)
     implementation(libs.kotlin.serialization.json)
     implementation(libs.kotlin.stdlib)
+    implementation(libs.logging)
     implementation(libs.signalr)
+    implementation(libs.sl4j)
     testImplementation(libs.bundles.kotlin.testing)
 }
 

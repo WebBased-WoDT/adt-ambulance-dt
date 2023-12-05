@@ -29,6 +29,7 @@ repositories {
 
 dependencies {
     implementation(libs.kotlin.stdlib)
+    implementation(libs.signalr)
     testImplementation(libs.bundles.kotlin.testing)
 }
 

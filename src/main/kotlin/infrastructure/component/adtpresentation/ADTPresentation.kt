@@ -32,7 +32,7 @@ import kotlinx.serialization.json.JsonPrimitive
 @Serializable
 data class DigitalTwinUpdate(
     val dtId: String,
-    val eventType: String,
+    val eventType: DigitalTwinEventType,
     val eventDateTime: String,
     val properties: Map<String, JsonPrimitive> = mapOf(),
     val relationships: List<DigitalTwinRelationship> = listOf(),
@@ -51,3 +51,13 @@ data class DigitalTwinRelationship(
     @SerialName("\$targetId")
     val targetId: String,
 )
+
+/** It models the Digital Twins event type. */
+@Serializable
+enum class DigitalTwinEventType {
+    /** Update Digital Twin event type. */
+    UPDATE,
+
+    /** Delete Digital Twin event type. */
+    DELETE,
+}

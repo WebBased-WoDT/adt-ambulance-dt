@@ -20,7 +20,8 @@ import application.component.WoDTShadowingAdapter
 import com.microsoft.signalr.HubConnection
 import com.microsoft.signalr.HubConnectionBuilder
 import com.microsoft.signalr.HubConnectionState
-import entity.ontology.DTKnowledgeGraph
+import entity.events.ShadowingEvents
+import io.github.oshai.kotlinlogging.KotlinLogging
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 
@@ -35,7 +36,7 @@ class ADTWoDTShadowingAdapter : WoDTShadowingAdapter {
         checkNotNull(System.getenv(SIGNALR_TOPIC_NAME)) { "Please provide a valid SignalR topic name" }
     }
 
-    private val _events = MutableSharedFlow<DTKnowledgeGraph>()
+    private val _events = MutableSharedFlow<ShadowingEvents>()
     private val signalRConnection = HubConnectionBuilder.create(System.getenv(SIGNALR_NEGOTIATION_URL)).build()
 
     override val events = _events.asSharedFlow()

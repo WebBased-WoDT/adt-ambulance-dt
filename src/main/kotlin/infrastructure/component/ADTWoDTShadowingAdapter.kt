@@ -49,6 +49,7 @@ class ADTWoDTShadowingAdapter : WoDTShadowingAdapter {
 
     private fun HubConnection.persistentStart() {
         this.start().blockingAwait()
+        logger.info { "Started" }
         this.onClosed {
             if (this.connectionState == HubConnectionState.DISCONNECTED) {
                 this.persistentStart()
@@ -59,5 +60,6 @@ class ADTWoDTShadowingAdapter : WoDTShadowingAdapter {
     companion object {
         private const val SIGNALR_NEGOTIATION_URL = "SIGNALR_NEGOTIATION_URL"
         private const val SIGNALR_TOPIC_NAME = "SIGNALR_TOPIC_NAME"
+        private val logger = KotlinLogging.logger {}
     }
 }

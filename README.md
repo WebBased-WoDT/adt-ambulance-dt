@@ -6,3 +6,8 @@
 
 This is the Ambulance WoDT Digital Twin layer that use Azure Digital Twins as a Twin Builder. 
 
+## Usage
+You need to specify the following environment variable:
+- `SIGNALR_NEGOTIATION_URL`: Azure SignalR Negotiation url
+- `SIGNALR_TOPIC_NAME`: the topic name used to publish events on SignalR
+

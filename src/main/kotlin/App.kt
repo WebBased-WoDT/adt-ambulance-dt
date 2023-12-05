@@ -1,3 +1,7 @@
+import application.service.WoDTEngine
+import infrastructure.component.ADTWoDTShadowingAdapter
+import kotlinx.coroutines.runBlocking
+
 /*
  * Copyright (c) 2023. Andrea Giulianelli
  *
@@ -17,6 +21,9 @@
 /**
  * Template for kotlin projects.
  */
-fun main() {
-    println("Hello World from Kotlin Template")
+fun main() = runBlocking {
+    val woDTShadowingAdapter = ADTWoDTShadowingAdapter()
+    val woDTEngine = WoDTEngine(woDTShadowingAdapter)
+
+    woDTEngine.start()
 }

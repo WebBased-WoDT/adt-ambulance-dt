@@ -26,6 +26,9 @@ group = "io.github.smartoperatingblock"
 
 repositories {
     mavenCentral()
+    maven {
+        url = uri("https://git.informatik.uni-hamburg.de/api/v4/groups/sane-public/-/packages/maven")
+    }
 }
 
 dependencies {
@@ -36,6 +39,9 @@ dependencies {
     implementation(libs.logging)
     implementation(libs.signalr)
     implementation(libs.sl4j)
+    implementation(libs.wot.servient)
+    implementation(libs.wot.servient.binding.http)
+    implementation(libs.wot.servient.binding.ws)
     testImplementation(libs.bundles.kotlin.testing)
 }
 

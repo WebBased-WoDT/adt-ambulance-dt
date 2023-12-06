@@ -17,33 +17,49 @@
 package infrastructure.component
 
 import application.component.WoDTShadowingAdapter
+import application.presenter.adtpresentation.DigitalTwinUpdate
+import application.presenter.adtpresentation.toShadowingEvent
 import com.microsoft.signalr.HubConnection
 import com.microsoft.signalr.HubConnectionBuilder
 import com.microsoft.signalr.HubConnectionState
-import entity.events.ShadowingEvents
+import entity.events.ShadowingEvent
+import entity.ontology.DTOntology
+import entity.ontology.ambulance.AmbulanceOntology
 import io.github.oshai.kotlinlogging.KotlinLogging
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
+import kotlinx.coroutines.launch
+import kotlinx.serialization.json.Json
 
 /**
  * The [WoDTShadowingAdapter] for Azure Digital Twins.
- * It consumes events from Azure SignalR.
+ * It consumes events from Azure SignalR and convert them in [ShadowingEvent] following the provided [ontology].
  */
-class ADTWoDTShadowingAdapter : WoDTShadowingAdapter {
+class ADTWoDTShadowingAdapter(val ontology: DTOntology) : WoDTShadowingAdapter {
 
     init {
         checkNotNull(System.getenv(SIGNALR_NEGOTIATION_URL)) { "Please provide a valid negotiation url" }
         checkNotNull(System.getenv(SIGNALR_TOPIC_NAME)) { "Please provide a valid SignalR topic name" }
+        checkNotNull(System.getenv(DIGITAL_TWIN_URI)) { "Please provide the exposed Digital Twin URI" }
     }
 
-    private val _events = MutableSharedFlow<ShadowingEvents>()
+    private val _events = MutableSharedFlow<ShadowingEvent>()
     private val signalRConnection = HubConnectionBuilder.create(System.getenv(SIGNALR_NEGOTIATION_URL)).build()
 
     override val events = _events.asSharedFlow()
 
     override suspend fun startShadowAdaptation() {
         signalRConnection.on(System.getenv(SIGNALR_TOPIC_NAME), {
-            println(it)
+            CoroutineScope(Dispatchers.Default).launch {
+                _events.emit(
+                    Json.decodeFromString<DigitalTwinUpdate>(it).toShadowingEvent(
+                        System.getenv(DIGITAL_TWIN_URI),
+                        AmbulanceOntology(),
+                    ),
+                )
+            }
         }, String::class.java)
         signalRConnection.persistentStart()
     }
@@ -61,6 +77,7 @@ class ADTWoDTShadowingAdapter : WoDTShadowingAdapter {
     companion object {
         private const val SIGNALR_NEGOTIATION_URL = "SIGNALR_NEGOTIATION_URL"
         private const val SIGNALR_TOPIC_NAME = "SIGNALR_TOPIC_NAME"
+        private const val DIGITAL_TWIN_URI = "DIGITAL_TWIN_URI"
         private val logger = KotlinLogging.logger {}
     }
 }

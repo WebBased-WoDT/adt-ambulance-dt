@@ -22,12 +22,21 @@ package entity.ontology
  * This interface is the one that DT Developer must implement.
  */
 interface DTOntology {
-    /** Obtain the ontology property from the [rawProperty] in input. */
-    fun obtainProperty(rawProperty: String): Property
+    /**
+     * Obtain the ontology property from the [rawProperty] in input.
+     * If the mapping cannot be done it will return null.
+     */
+    fun obtainProperty(rawProperty: String): Property?
 
-    /** Convert a [rawProperty] and its [value] to the ontology model. */
-    fun <T : Any> convertPropertyValue(rawProperty: String, value: T): Pair<Property, Node>
+    /**
+     * Convert a [rawProperty] and its [value] to the ontology model.
+     * If the mapping cannot be done it will return null.
+     */
+    fun <T : Any> convertPropertyValue(rawProperty: String, value: T): Pair<Property, Node>?
 
-    /** Convert a [rawRelationship] and its [targetUri] to the ontology model. */
-    fun convertRelationship(rawRelationship: String, targetUri: String): Pair<Property, Node>
+    /**
+     * Convert a [rawRelationship] and its [targetUri] to the ontology model.
+     * If the mapping cannot be done it will return null.
+     */
+    fun convertRelationship(rawRelationship: String, targetUri: String): Pair<Property, Node>?
 }

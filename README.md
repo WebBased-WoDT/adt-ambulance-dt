@@ -11,3 +11,9 @@ You need to specify the following environment variable:
 - `SIGNALR_NEGOTIATION_URL`: Azure SignalR Negotiation url
 - `SIGNALR_TOPIC_NAME`: the topic name used to publish events on SignalR
 - `DIGITAL_TWIN_URI`: the uri of the exposed WoDT Digital Twin
+- `AZURE_CLIENT_ID`: ID of an Azure AD application
+- `AZURE_TENANT_ID`: ID of the application's Azure AD tenant
+- `AZURE_CLIENT_SECRET`: the application's client secrets
+- `AZURE_DT_ENDPOINT`: the Azure Digital Twins instance endpoint
+- `AZURE_DT_ID`: the id of the Digital Twin on Azure Digital Twins
+- `PHYSICAL_ASSET_ID`: the ID of the Physical Asset

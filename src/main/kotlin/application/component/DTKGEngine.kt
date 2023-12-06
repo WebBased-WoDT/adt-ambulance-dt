@@ -16,7 +16,7 @@
 
 package application.component
 
-import entity.ontology.DTKnowledgeGraph
+import entity.events.ShadowingEvent
 import kotlinx.coroutines.flow.Flow
 
 /**
@@ -34,8 +34,8 @@ interface DTKGReader {
  * This interface models the writer part of the DTKGEngine component.
  */
 interface DTKGWriter {
-    /** Update the current view over the Digital Twin Knowledge Graph. */
-    fun updateDigitalTwinKnowledgeGraph(dtKnowledgeGraph: DTKnowledgeGraph)
+    /** Update the current view over the Digital Twin Knowledge Graph via the last [shadowingEvent]. */
+    fun updateDigitalTwinKnowledgeGraph(shadowingEvent: ShadowingEvent)
 }
 
 /**

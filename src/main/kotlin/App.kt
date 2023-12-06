@@ -1,4 +1,5 @@
 import application.service.WoDTEngine
+import entity.ontology.ambulance.AmbulanceOntology
 import infrastructure.component.ADTWoDTShadowingAdapter
 import kotlinx.coroutines.runBlocking
 
@@ -22,7 +23,8 @@ import kotlinx.coroutines.runBlocking
  * Template for kotlin projects.
  */
 fun main() = runBlocking {
-    val woDTShadowingAdapter = ADTWoDTShadowingAdapter()
+    val ambulanceOntology = AmbulanceOntology()
+    val woDTShadowingAdapter = ADTWoDTShadowingAdapter(ambulanceOntology)
     val woDTEngine = WoDTEngine(woDTShadowingAdapter)
 
     woDTEngine.start()

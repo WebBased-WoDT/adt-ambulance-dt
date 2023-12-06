@@ -19,10 +19,10 @@ package entity.events
 import entity.ontology.DTKnowledgeGraph
 
 /** Interface that models the shadowing events to be dispatched through the system. */
-sealed interface ShadowingEvents
+sealed interface ShadowingEvent
 
 /** This class models the event of the update of the [dtKnowledgeGraph]. */
-data class UpdateEvent(val dtKnowledgeGraph: DTKnowledgeGraph) : ShadowingEvents
+data class UpdateEvent(val dtKnowledgeGraph: DTKnowledgeGraph) : ShadowingEvent
 
 /** This class models the event of the deletion of the digital twin. */
-data object DeleteEvent : ShadowingEvents
+data object DeleteEvent : ShadowingEvent

@@ -16,19 +16,25 @@
 
 package application.service
 
+import application.component.DTKGEngine
 import application.component.WoDTShadowingAdapter
 import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
 
 /**
  * The Engine that runs the WoDT layer.
  * It takes the [wodtShadowingAdapter] component.
  */
-class WoDTEngine(private val wodtShadowingAdapter: WoDTShadowingAdapter) {
+class WoDTEngine(
+    private val wodtShadowingAdapter: WoDTShadowingAdapter,
+    private val dtkgEngine: DTKGEngine,
+) {
     /**
      * Method to start the [WoDTEngine].
      */
     suspend fun start() = coroutineScope {
         wodtShadowingAdapter.startShadowAdaptation()
-        wodtShadowingAdapter.events.collect { println(it) }
+        launch { wodtShadowingAdapter.events.collect { dtkgEngine.updateDigitalTwinKnowledgeGraph(it) } }
+        launch { dtkgEngine.digitalTwinKnowledgeGraphs.collect { println(it) } }
     }
 }

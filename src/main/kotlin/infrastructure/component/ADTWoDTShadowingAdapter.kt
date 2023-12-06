@@ -24,8 +24,8 @@ import com.microsoft.signalr.HubConnectionBuilder
 import com.microsoft.signalr.HubConnectionState
 import entity.events.ShadowingEvent
 import entity.ontology.DTOntology
-import entity.ontology.ambulance.AmbulanceOntology
 import io.github.oshai.kotlinlogging.KotlinLogging
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -37,7 +37,10 @@ import kotlinx.serialization.json.Json
  * The [WoDTShadowingAdapter] for Azure Digital Twins.
  * It consumes events from Azure SignalR and convert them in [ShadowingEvent] following the provided [ontology].
  */
-class ADTWoDTShadowingAdapter(val ontology: DTOntology) : WoDTShadowingAdapter {
+class ADTWoDTShadowingAdapter(
+    private val ontology: DTOntology,
+    private val dispatcher: CoroutineDispatcher = Dispatchers.Default,
+) : WoDTShadowingAdapter {
 
     init {
         checkNotNull(System.getenv(SIGNALR_NEGOTIATION_URL)) { "Please provide a valid negotiation url" }
@@ -52,11 +55,11 @@ class ADTWoDTShadowingAdapter(val ontology: DTOntology) : WoDTShadowingAdapter {
 
     override suspend fun startShadowAdaptation() {
         signalRConnection.on(System.getenv(SIGNALR_TOPIC_NAME), {
-            CoroutineScope(Dispatchers.Default).launch {
+            CoroutineScope(dispatcher).launch {
                 _events.emit(
                     Json.decodeFromString<DigitalTwinUpdate>(it).toShadowingEvent(
                         System.getenv(DIGITAL_TWIN_URI),
-                        AmbulanceOntology(),
+                        ontology,
                     ),
                 )
             }

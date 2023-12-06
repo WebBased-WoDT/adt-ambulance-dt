@@ -16,7 +16,7 @@
 
 package application.component
 
-import entity.events.ShadowingEvents
+import entity.events.ShadowingEvent
 import kotlinx.coroutines.flow.Flow
 
 /**
@@ -24,7 +24,7 @@ import kotlinx.coroutines.flow.Flow
  */
 interface WoDTShadowingAdapter {
     /** Events emitted by the shadowing adapter. */
-    val events: Flow<ShadowingEvents>
+    val events: Flow<ShadowingEvent>
 
     /** Start the adaptation and extension of the shadowing function of the twin builder used under the hood. */
     suspend fun startShadowAdaptation()

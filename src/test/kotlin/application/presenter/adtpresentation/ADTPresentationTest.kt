@@ -14,18 +14,59 @@
  * limitations under the License.
  */
 
-package infrastructure.adtpresentation
+package application.presenter.adtpresentation
 
 import TestingUtils.readResourceFile
-import infrastructure.component.adtpresentation.DigitalTwinEventType
-import infrastructure.component.adtpresentation.DigitalTwinUpdate
+import entity.ontology.DTKnowledgeGraph
+import entity.ontology.Individual
+import entity.ontology.Literal
+import entity.ontology.Property
+import entity.ontology.ambulance.AmbulanceOntology
 import io.kotest.assertions.throwables.shouldNotThrow
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.shouldNotBe
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonPrimitive
 
 class ADTPresentationTest : StringSpec({
+    val digitalTwinDelete = DigitalTwinUpdate(
+        "entity/ontology/ambulance",
+        DigitalTwinEventType.DELETE,
+        "2023-02-02T10:00:00",
+    )
+
+    val digitalTwinUpdate = DigitalTwinUpdate(
+        "entity/ontology/ambulance",
+        DigitalTwinEventType.UPDATE,
+        "2023-02-02T10:00:00",
+        mapOf(
+            "busy" to JsonPrimitive(true),
+            "fuelLevel" to JsonPrimitive(85.5),
+        ),
+        listOf(
+            DigitalTwinRelationship(
+                "entity/ontology/ambulance",
+                "rel_is_part_of_mission",
+                "mission",
+            ),
+            DigitalTwinRelationship(
+                "entity/ontology/ambulance",
+                "rel_is_approaching",
+                "intersection",
+            ),
+        ),
+    )
+
+    val convertedDigitalTwin = DTKnowledgeGraph(
+        "uri",
+        listOf(
+            Property("https://healthcareontology.com/ontology#isBusy") to Literal(true),
+            Property("https://healthcareontology.com/ontology#hasFuelLevel") to Literal(85.5),
+            Property("https://healthcareontology.com/ontology#isInMission") to Individual("mission"),
+            Property("https://smartcityontology.com/ontology#isApproaching") to Individual("intersection"),
+        ),
+    )
 
     "A simple Digital twin delete event should be deserialized" {
         readResourceFile("emptyDelete.json")?.let {
@@ -58,5 +99,14 @@ class ADTPresentationTest : StringSpec({
                 event.relationships.size shouldNotBe 0
             }
         }
+    }
+
+    "We should be able to extract the DT Knowledge Graph from a Digital Twin Update" {
+        digitalTwinUpdate.extractDTKnowledgeGraph("uri", AmbulanceOntology()) shouldBe convertedDigitalTwin
+    }
+
+    "A Digital Twin Delete event should be converted in an empty DT Knowledge Graph" {
+        digitalTwinDelete.extractDTKnowledgeGraph("uri", AmbulanceOntology()) shouldBe
+            DTKnowledgeGraph("uri", listOf())
     }
 })

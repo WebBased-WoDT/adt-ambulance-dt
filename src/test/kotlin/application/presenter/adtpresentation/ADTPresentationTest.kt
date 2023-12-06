@@ -17,6 +17,8 @@
 package application.presenter.adtpresentation
 
 import TestingUtils.readResourceFile
+import entity.events.DeleteEvent
+import entity.events.UpdateEvent
 import entity.ontology.DTKnowledgeGraph
 import entity.ontology.Individual
 import entity.ontology.Literal
@@ -108,5 +110,14 @@ class ADTPresentationTest : StringSpec({
     "A Digital Twin Delete event should be converted in an empty DT Knowledge Graph" {
         digitalTwinDelete.extractDTKnowledgeGraph("uri", AmbulanceOntology()) shouldBe
             DTKnowledgeGraph("uri", listOf())
+    }
+
+    "A Digital Twin Update event should be converted in a Update Shadowing event" {
+        digitalTwinUpdate.toShadowingEvent("uri", AmbulanceOntology()) shouldBe
+            UpdateEvent(digitalTwinUpdate.extractDTKnowledgeGraph("uri", AmbulanceOntology()))
+    }
+
+    "A Digital Twin Delete event should be converted in a Delete Shadowing event" {
+        digitalTwinDelete.toShadowingEvent("uri", AmbulanceOntology()) shouldBe DeleteEvent
     }
 })

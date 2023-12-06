@@ -3,6 +3,7 @@ kotlin = "1.9.21"
 kotest = "5.8.0"
 
 [libraries]
+archunit = { module = "com.tngtech.archunit:archunit-junit5", version = "1.2.1" }
 kotest-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
 kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
 kotest-assertions-core-jvm = { module = "io.kotest:kotest-assertions-core-jvm", version.ref = "kotest" }
@@ -14,7 +15,7 @@ signalr = { module = "com.microsoft.signalr:signalr", version = "8.0.0" }
 sl4j = { module = "org.slf4j:slf4j-simple", version = "2.0.3" }
 
 [bundles]
-kotlin-testing = ["kotest-junit5", "kotest-assertions-core", "kotest-assertions-core-jvm"]
+kotlin-testing = ["archunit", "kotest-junit5", "kotest-assertions-core", "kotest-assertions-core-jvm"]
 
 [plugins]
 dokka = { id ="org.jetbrains.dokka", version = "1.9.10" }

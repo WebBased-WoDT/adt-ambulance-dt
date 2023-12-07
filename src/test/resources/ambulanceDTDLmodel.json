@@ -1,0 +1,32 @@
+{
+  "@id": "dtmi:io:github:webbasedwodt:Ambulance;1",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;2",
+  "displayName": "Ambulance",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "busy",
+      "schema": "boolean"
+    },
+    {
+      "@type": "Property",
+      "name": "fuelLevel",
+      "schema": "double"
+    },
+    {
+      "@type": "Relationship",
+      "@id": "dtmi:io:github:webbasedwodt:Ambulance:rel_is_part_of_mission;1",
+      "name": "rel_is_part_of_mission",
+      "displayName": "The Ambulance is part of the mission",
+      "target": "dtmi:io:github:webwodt:ExternalDT;1"
+    },
+    {
+      "@type": "Relationship",
+      "@id": "dtmi:io:github:webbasedwodt:Ambulance:rel_is_approaching;1",
+      "name": "rel_is_approaching",
+      "displayName": "The Ambulance is approaching the intersection",
+      "target": "dtmi:io:github:webwodt:ExternalDT;1"
+    }
+  ]
+}

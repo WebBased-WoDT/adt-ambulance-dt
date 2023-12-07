@@ -1,7 +1,7 @@
 [versions]
 kotlin = "1.9.21"
 kotest = "5.8.0"
-wot = "1.15"
+wot = "1.16-SNAPSHOT"
 
 [libraries]
 archunit = { module = "com.tngtech.archunit:archunit-junit5", version = "1.2.1" }
@@ -17,9 +17,7 @@ kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "
 logging = { module = "io.github.oshai:kotlin-logging-jvm", version = "5.1.0" }
 signalr = { module = "com.microsoft.signalr:signalr", version = "8.0.0" }
 sl4j = { module = "org.slf4j:slf4j-simple", version = "2.0.3" }
-wot-servient = { module = "city.sane.wot-servient:wot-servient", version.ref = "wot" }
-wot-servient-binding-http = { module = "city.sane.wot-servient:wot-servient-binding-http", version.ref = "wot"}
-wot-servient-binding-ws = { module = "city.sane.wot-servient:wot-servient-binding-websocket", version.ref = "wot"}
+wot-servient = { module = "io.github.sane-city:wot-servient", version.ref = "wot" }
 
 [bundles]
 kotlin-testing = ["archunit", "kotest-junit5", "kotest-assertions-core", "kotest-assertions-core-jvm"]

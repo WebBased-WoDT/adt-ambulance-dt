@@ -42,8 +42,6 @@ dependencies {
     implementation(libs.signalr)
     implementation(libs.sl4j)
     implementation(libs.wot.servient)
-    implementation(libs.wot.servient.binding.http)
-    implementation(libs.wot.servient.binding.ws)
     testImplementation(libs.bundles.kotlin.testing)
 }
 

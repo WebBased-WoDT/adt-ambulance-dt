@@ -23,10 +23,22 @@ package entity.ontology
  */
 interface DTOntology {
     /**
+     * This represents the type of the Digital Twin.
+     */
+    val dtType: String
+
+    /**
      * Obtain the ontology property from the [rawProperty] in input.
      * If the mapping cannot be done it will return null.
+     * It is valid both for dt properties and dt relationships.
      */
     fun obtainProperty(rawProperty: String): Property?
+
+    /**
+     * Obtain the semantic type of the value for a [rawProperty].
+     * It is valid both for dt properties and dt relationships.
+     */
+    fun obtainPropertyValueType(rawProperty: String): String?
 
     /**
      * Convert a [rawProperty] and its [value] to the ontology model.

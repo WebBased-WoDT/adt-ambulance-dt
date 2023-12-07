@@ -1,6 +1,7 @@
 [versions]
 kotlin = "1.9.21"
 kotest = "5.8.0"
+ktor = "2.3.6"
 wot = "1.16-SNAPSHOT"
 
 [libraries]
@@ -11,16 +12,27 @@ jena = { module = "org.apache.jena:apache-jena-libs", version = "4.1.0" }
 kotest-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
 kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
 kotest-assertions-core-jvm = { module = "io.kotest:kotest-assertions-core-jvm", version.ref = "kotest" }
+kotest-assertions-ktor = { module = "io.kotest.extensions:kotest-assertions-ktor", version = "2.0.0" }
 kotlin-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version = "1.8.0-RC" }
 kotlin-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "1.6.2" }
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+ktor-server-core = { module = "io.ktor:ktor-server-core", version.ref = "ktor" }
+ktor-server-engine-netty = { module = "io.ktor:ktor-server-netty", version.ref = "ktor" }
+ktor-server-test-host = { module = "io.ktor:ktor-server-test-host", version.ref = "ktor" }
 logging = { module = "io.github.oshai:kotlin-logging-jvm", version = "5.1.0" }
 signalr = { module = "com.microsoft.signalr:signalr", version = "8.0.0" }
 sl4j = { module = "org.slf4j:slf4j-simple", version = "2.0.3" }
 wot-servient = { module = "io.github.sane-city:wot-servient", version.ref = "wot" }
 
 [bundles]
-kotlin-testing = ["archunit", "kotest-junit5", "kotest-assertions-core", "kotest-assertions-core-jvm"]
+kotlin-testing = [
+    "archunit",
+    "kotest-junit5",
+    "kotest-assertions-core",
+    "kotest-assertions-core-jvm",
+    "kotest-assertions-ktor",
+    "ktor-server-test-host",
+]
 
 [plugins]
 dokka = { id ="org.jetbrains.dokka", version = "1.9.10" }

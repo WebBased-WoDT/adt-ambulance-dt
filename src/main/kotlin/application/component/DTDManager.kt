@@ -16,7 +16,7 @@
 
 package application.component
 
-import city.sane.wot.thing.Thing
+import io.github.sanecity.wot.thing.Thing
 
 /**
  * This interface models the reader part of the DTD Manager component.
@@ -26,7 +26,7 @@ interface DTDManagerReader {
      * Obtain the Digital Twin Descriptor.
      * In this Digital Twin it is used a Thing Description.
      */
-    fun getDTD(): Thing<*, *, *>
+    suspend fun getDTD(): Thing<*, *, *>?
 }
 
 /**
@@ -36,5 +36,5 @@ interface DTDManager : DTDManagerReader {
     /**
      * Add a WoDT Digital Twins Platform via its [platformUrl].
      */
-    fun addPlatform(platformUrl: String): Boolean
+    suspend fun addPlatform(platformUrl: String): Boolean
 }

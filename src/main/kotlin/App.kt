@@ -2,6 +2,8 @@ import application.service.WoDTEngine
 import entity.ontology.ambulance.AmbulanceOntology
 import infrastructure.component.ADTWoDTShadowingAdapter
 import infrastructure.component.JenaDTKGEngine
+import infrastructure.component.KtorWoDTDigitalTwinInterface
+import infrastructure.component.WoTDTDManager
 import kotlinx.coroutines.runBlocking
 
 /*
@@ -27,7 +29,10 @@ fun main(): Unit = runBlocking {
     val ambulanceOntology = AmbulanceOntology()
     val woDTShadowingAdapter = ADTWoDTShadowingAdapter(ambulanceOntology)
     val dtkgEngine = JenaDTKGEngine()
-    val woDTEngine = WoDTEngine(woDTShadowingAdapter, dtkgEngine)
+    val dtdManager = WoTDTDManager(ambulanceOntology)
+    val wodtDigitalTwinInterface = KtorWoDTDigitalTwinInterface(dtkgEngine, dtdManager)
+
+    val woDTEngine = WoDTEngine(woDTShadowingAdapter, dtkgEngine, wodtDigitalTwinInterface)
 
     woDTEngine.start()
 }

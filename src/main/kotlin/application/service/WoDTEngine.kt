@@ -37,7 +37,6 @@ class WoDTEngine(
     suspend fun start() = coroutineScope {
         wodtShadowingAdapter.startShadowAdaptation()
         launch { wodtShadowingAdapter.events.collect { dtkgEngine.updateDigitalTwinKnowledgeGraph(it) } }
-        launch { dtkgEngine.digitalTwinKnowledgeGraphs.collect { println(it) } }
         woDTDigitalTwinInterface.startWoDTDigitalTwinInterface()
     }
 }

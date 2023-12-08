@@ -20,8 +20,10 @@ import application.component.DTDManagerReader
 import application.component.DTKGReader
 import application.component.WoDTDigitalTwinInterface
 import io.ktor.server.application.Application
+import io.ktor.server.application.install
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
+import io.ktor.server.websocket.WebSockets
 
 /**
  * Implementation of the [WoDTDigitalTwinInterface].
@@ -32,6 +34,7 @@ class KtorWoDTDigitalTwinInterface(
 ) : WoDTDigitalTwinInterface {
     override fun startWoDTDigitalTwinInterface() {
         embeddedServer(Netty, port = PORT) {
+            install(WebSockets)
             dispatcher(this)
         }.start(wait = false)
     }

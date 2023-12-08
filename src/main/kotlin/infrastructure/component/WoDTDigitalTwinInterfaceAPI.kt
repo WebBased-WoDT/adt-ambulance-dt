@@ -27,6 +27,8 @@ import io.ktor.server.response.respond
 import io.ktor.server.routing.Route
 import io.ktor.server.routing.get
 import io.ktor.server.routing.routing
+import io.ktor.server.websocket.webSocket
+import io.ktor.websocket.send
 import kotlinx.coroutines.async
 
 /**
@@ -37,6 +39,7 @@ fun Application.wodtDigitalTwinInterfaceAPI(dtkgReader: DTKGReader, dtdReader: D
         getDigitalTwin()
         getDigitalTwinKnowledgeGraph(dtkgReader)
         getDigitalTwinDescriptor(dtdReader)
+        getDigitalTwinKnowledgeGraphEvents(dtkgReader)
     }
 }
 
@@ -81,3 +84,11 @@ private fun Route.getDigitalTwinDescriptor(dtdReader: DTDManagerReader) =
             }
         }
     }
+
+private fun Route.getDigitalTwinKnowledgeGraphEvents(dtkgReader: DTKGReader) {
+    webSocket("/dtkg") {
+        dtkgReader.digitalTwinKnowledgeGraphs.collect {
+            send(it)
+        }
+    }
+}

@@ -55,7 +55,7 @@ private fun Route.getDigitalTwinKnowledgeGraph(dtkgReader: DTKGReader) =
             when (this) {
                 null -> call.respond(HttpStatusCode.NoContent)
                 else -> {
-                    call.response.status(HttpStatusCode.OK)
+                    call.response.status(if (this.isEmpty()) { HttpStatusCode.NoContent } else { HttpStatusCode.OK })
                     call.response.headers.append(HttpHeaders.ContentType, "text/turtle")
                     call.response.headers.append(
                         HttpHeaders.Link,

@@ -40,6 +40,7 @@ dependencies {
     implementation(libs.kotlin.stdlib)
     implementation(libs.ktor.server.core)
     implementation(libs.ktor.server.engine.netty)
+    implementation(libs.ktor.server.websockets)
     implementation(libs.logging)
     implementation(libs.signalr)
     implementation(libs.sl4j)

@@ -17,6 +17,7 @@
 package application.service
 
 import application.component.DTKGEngine
+import application.component.WoDTDigitalTwinInterface
 import application.component.WoDTShadowingAdapter
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
@@ -28,6 +29,7 @@ import kotlinx.coroutines.launch
 class WoDTEngine(
     private val wodtShadowingAdapter: WoDTShadowingAdapter,
     private val dtkgEngine: DTKGEngine,
+    private val woDTDigitalTwinInterface: WoDTDigitalTwinInterface,
 ) {
     /**
      * Method to start the [WoDTEngine].
@@ -36,5 +38,6 @@ class WoDTEngine(
         wodtShadowingAdapter.startShadowAdaptation()
         launch { wodtShadowingAdapter.events.collect { dtkgEngine.updateDigitalTwinKnowledgeGraph(it) } }
         launch { dtkgEngine.digitalTwinKnowledgeGraphs.collect { println(it) } }
+        woDTDigitalTwinInterface.startWoDTDigitalTwinInterface()
     }
 }

@@ -17,9 +17,11 @@
 package application.component
 
 /**
- * This interface models the WoDT Digital Twin Interface component.
+ * This interface models the WoDT Web Server that allow to use the
+ * WoDT Digital Twin Interface component and expose the endpoint that is used by the
+ * WoDT Digital Twins Platform to signal the registration.
  */
-interface WoDTDigitalTwinInterface {
-    /** Start the WoDT Digital Twin Interface. */
-    fun startWoDTDigitalTwinInterface()
+interface WoDTWebServer {
+    /** Start the WoDT Web Server. */
+    fun start()
 }

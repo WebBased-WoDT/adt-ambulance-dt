@@ -18,7 +18,7 @@ package infrastructure.component
 
 import application.component.DTDManagerReader
 import application.component.DTKGReader
-import application.component.WoDTDigitalTwinInterface
+import application.component.WoDTWebServer
 import io.ktor.server.application.Application
 import io.ktor.server.application.install
 import io.ktor.server.engine.embeddedServer
@@ -26,13 +26,13 @@ import io.ktor.server.netty.Netty
 import io.ktor.server.websocket.WebSockets
 
 /**
- * Implementation of the [WoDTDigitalTwinInterface].
+ * Implementation of the [WoDTWebServer].
  */
-class KtorWoDTDigitalTwinInterface(
+class KtorWoDTWebServer(
     private val dtkgReader: DTKGReader,
     private val dtdReader: DTDManagerReader,
-) : WoDTDigitalTwinInterface {
-    override fun startWoDTDigitalTwinInterface() {
+) : WoDTWebServer {
+    override fun start() {
         embeddedServer(Netty, port = PORT) {
             install(WebSockets)
             dispatcher(this)

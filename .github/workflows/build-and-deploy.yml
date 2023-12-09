@@ -86,6 +86,8 @@ jobs:
   documentation-deploy:
     needs:
       - release-and-delivery
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     if: needs.release-and-delivery.outputs.release-status == 'released'
     steps:

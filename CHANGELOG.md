@@ -1,3 +1,121 @@
+## 1.0.0 (2023-12-09)
+
+
+### Features
+
+* add the dtkg engine to the wodt dt engine ([4bab98a](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/4bab98a411300b50b124aa246d275450893d5052))
+* create base adt wodt shadowing adapter ([9153154](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/915315471da23ccf6af2f2a87f9fed84c59de4ed))
+* create base WoDT engine ([a524ad7](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/a524ad791a527d905c5edda96d0a82b27cada197))
+* create jena-based dtkg engine ([85272e4](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/85272e4e578065111578139b1606809570cfeb4b))
+* emit shadowing events ([6b72e21](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/6b72e217fd2c35862a87b04f84cf6c45e54110d4))
+* implement base wodt digital twin interface based on ktor ([5e0c16b](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/5e0c16bcdece90e27d60298784b1654c3f199ca1))
+* implement dt observation ([e8274ad](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/e8274ad2925545af10229223b68d8afcb69e7b3c))
+* implement first version of the dtd manager ([2e55c70](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/2e55c70038213301db3fe23f25024b87cce464c2))
+* implement first version of the platform management interface ([a68d6ec](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/a68d6ecdd385220a5fa360bfbf562e598a97ac95))
+* implement platform management interface endpoint to add registered platform ([2b2ee48](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/2b2ee48bf9623ca892e39dce1726b59de6e40a20))
+* include platform management interface in the engine ([e96223b](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/e96223bfe87fa79f9bf74aa9dae5248a3684f117))
+
+
+### Dependency updates
+
+* **deps:** add apache jena dependency ([e1696d2](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/e1696d24e3065bd2d5ef0cd6d3c9d621af8bef94))
+* **deps:** add archunit dependency ([54496fc](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/54496fc01e5590c8442845565cde0271c407bc2c))
+* **deps:** add azure digital twins dependencies ([203751a](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/203751a774d405cf3a6961dfab86af24f37c92d7))
+* **deps:** add kotlin coroutines dependency ([2a3f062](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/2a3f06257c4cba327842540d3bf675d70669d8ce))
+* **deps:** add kotlin serialization dependencies ([86469de](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/86469de658f325579b723040c6650daaf042f0b4))
+* **deps:** add ktor client dependencies ([e02abd3](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/e02abd392e050f57cb8f7da8782a2c4821be1bb9))
+* **deps:** add ktor dependencies ([4eac13b](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/4eac13b1d36bbcfc314f4088a8947698f9c1c345))
+* **deps:** add ktor server content negotiation dependencies ([a7bc3f9](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/a7bc3f9659ba5e8c0cb53fd7fd8e9ac6a290b9a2))
+* **deps:** add ktor websockets dependency ([66a776f](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/66a776fdbef3e58615a843be3625d153d457653d))
+* **deps:** add signalr dependency ([aaa0ec9](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/aaa0ec98a62b9cfa85b4ab0b86c6e22c6a26e014))
+* **deps:** add sl4j and logger wrapper dependencies ([4b2ac4d](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/4b2ac4d84bcec93a4c94b4604307383c25a7fa3d))
+* **deps:** add wot-servient dependency ([bd79dd5](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/bd79dd5289ff66496a5c59646744415907cd6199))
+* **deps:** remove wot binding dependencies and update wot servient to the latest snapshot ([7ec2222](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/7ec22221752526b6dca94bdaeeba7e9b915da8ce))
+* **deps:** update alpine docker tag to v3.19 ([4d92d42](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/4d92d42e12413f2ce5a1dc59e0e0d35852665412))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.79 ([e505fe2](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/e505fe2cddd953beca4d3a0ab775e438db4b9b4a))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.80 ([21e5b8d](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/21e5b8da4c33104d303311d0730d87b6634fa023))
+* **deps:** update plugin com.gradle.enterprise to v3.16 ([50d2447](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/50d244753b514771faf8efc65f3caf0a7924e3b6))
+* **deps:** update plugin kotlin-qa to v0.56.0 ([c482af2](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/c482af2f7d1356d348b77538661cdaa68d571daa))
+
+
+### Bug Fixes
+
+* correct status code considering jena nullability ([cff8cee](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/cff8cee8d6c1b89b5cf1f0e94356574cf515c97d))
+
+
+### Tests
+
+* add ktor testing utility ([7fb3fd2](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/7fb3fd2a04ebbfb54d11475b8842d4c7f6044700))
+* add test about event deserialization ([d4c8f92](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/d4c8f929c86606888fc15df67c5cd63d086495f4))
+* add test for dtdl model conversion to thing description ([f84f2eb](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/f84f2ebc31663d099f9d6f14242803b82ec87628))
+* add test for platform registration ([5971fcc](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/5971fcc99eeb8ffabd5eafa493075eafbc8b1c46))
+* add test on digital twin update conversion to knowledge graph ([43fd18d](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/43fd18dcdff87b10eee0a204e9d1c862977846ca))
+* add test on digital twin update conversion to shadowing events ([c45ef46](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/c45ef463cc58569acce48d823870cd18a9026fa6))
+* add test on the clean architecture ([9d542d7](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/9d542d716401e760fcd84696fcf5b939babc46db))
+* add tests for jena dtkg engine ([26e64ae](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/26e64aee67a90773b778e02cb43302fe8f29c944))
+* add tests for wodt digital twin interface ([b36ccd3](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/b36ccd35a7792e6f02464b62b7c4dcda9378c608))
+* create wot dtd manager test double ([7a2a946](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/7a2a9467f72aef1428a6288251e4ea28ac92b8b7))
+* improve wot dtd manager test double ([0669f85](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/0669f85b7667dd252a2726f21c972342bccefe4d))
+* include platform management interface api in the ktor testing utils ([2323698](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/2323698bfad4d9bcb249cd443633affc9c4c72cc))
+
+
+### Build and continuous integration
+
+* set the main class ([e975990](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/e975990309678622f4729a3691c1d4c4a797632b))
+
+
+### General maintenance
+
+* add azure signalr event model ([3c2c2e4](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/3c2c2e46ac9c2ed567cf8d34d3523b5c3973d0b8))
+* add conversion to dt knowledge graph and shadowing events ([7eca0c2](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/7eca0c27d4fae74f4b3baa210b4da086048b7c24))
+* add digital twin knowledge graph intermediate model ([deb87c7](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/deb87c719fcbc9c417d12fb48629861d789abc65))
+* add digital twin ontology interface ([263c158](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/263c1585a5f6bd735a95e81ea22041657f4370b0))
+* add dtd manager interfaces ([33d5f55](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/33d5f553fb8773b2149e6e8d5653062bda6765ef))
+* add dtdl model conversion to thing description ([00da0d0](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/00da0d092c3d6d683539869ac71b0e6dda8bb892))
+* add dtkg engine creation in the start ([465948b](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/465948b52845294baf934e4ea828146792db4d33))
+* add event type ([acb2426](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/acb242652505d9e761820aad7c692f6834bdecc1))
+* add events to be tested ([2506c55](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/2506c557fd7f68f695ca61a0424bdd49a2f4093a))
+* add implemented wodt digital twin interface to main script ([9e7ada1](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/9e7ada19ab3bf6bedc0932e82c7b5fe500d7d55e))
+* add logger ([80592b7](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/80592b72dafb41763ab19893eb138a2bb2c67bdd))
+* add platform management interface ([bb6118d](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/bb6118d6c2758fcfe88ff59643cd7cd57126bc36))
+* add snapshot observation affordance ([4826cf9](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/4826cf926cf8e7735dfd6cb4c371edd9fd2071c5))
+* add testing utilities ([f348991](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/f34899107f8e153674f6cdd8ea0f0b07ca1b9536))
+* add wodt vocabulary ([d0e8a1c](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/d0e8a1c3917a8e846523716b460e5448276d6513))
+* configure the ontology ([384dfc3](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/384dfc392d2fc98391e0a9d9d08f94f216cfffff))
+* create ambulance ontology ([52181cc](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/52181ccd6db603d6822585187710fe82dd626397))
+* create base main ([47ebbd7](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/47ebbd7998a88d111150ee72ef599997085fc8ca))
+* create DTKGEngine interfaces ([523bf1e](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/523bf1ecde76e4a8b8b197bc0111d1fc5c167a7a))
+* create platform registration payload ([b29b8c0](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/b29b8c0eda171d070fe14edf018f034c2aca8617))
+* create wodt digital twin interface interface ([3b7a03a](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/3b7a03a54e1a2e8db9e6dbb74e14af709965637e))
+* create wodt shadowing adapter interface ([cc44d10](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/cc44d10de51f0cc7380cd172dae3c7a1c0d47ffc))
+* delete sample test ([c197baa](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/c197baa8ab44e285a32d5cf26c8edc18e1cb1869))
+* have the DTKG to consume shadowing events ([4d64131](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/4d64131a81d94dc8af532b2fb755d2231e0a0b43))
+* include platform management endpoint api in the ktor web server engine ([d3eea5d](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/d3eea5d745b88c196f2545cb13145826d5aa6241))
+* include platform management interface in the main script ([06546d1](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/06546d1516e5a286443222772d57142d2b62aa8e))
+* include the wodt digital twin interface in the wodt engine flow ([b388ead](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/b388eadbbfd080bd606790a23f3d10454899c400))
+* make methods suspendable ([c3fe06b](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/c3fe06b09627c023b58b05580253aa35052959ac))
+* model shadowing events ([c70901e](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/c70901ede8541d74c11d96757ed9eea665fd24d9))
+* return nullable types ([d78bccc](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/d78bccc3ca2b26a131e803aa8c9c7144f3fd86b9))
+* update Dockerfile ([d55da88](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/d55da88e6bafe10964e2f6debff696ae101b40a1))
+* update dt ontology with dt type and property value type ([8815fe7](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/8815fe724510e6da7cde04c051fa0ebdccfa74c9))
+* update LICENSE ([4259279](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/425927964b8bbe49e82ed743bebabfb08b108c62))
+* update project name ([db1d6e3](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/db1d6e39c5de9c95169d1332201363173172c927))
+* update README ([742680a](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/742680aeeaff78ed3ff74a4a5987771ef57d5728))
+* update README ([efa61cb](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/efa61cbb3706281286b3b9c24396a05e9a0e5719))
+* update README env variables ([b20c542](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/b20c5424b43e0b73faef8c5c9de62084ba528f4f))
+* update README with dt uri env variable ([1265940](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/126594046bdfcfa26f7a8415fef363ac6b2cfe08))
+* use shadow events in the wodt shadowing adapter ([f095c4e](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/f095c4e38b141cb5dc193857079e1eb36b8158b0))
+
+
+### Refactoring
+
+* create the concept of wodt web server to enable endpoint of different components to be exposed ([735019d](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/735019dd16fe3923b6f4e4c2e0a1fcd9ece3bcd9))
+* inject the dispatcher ([b6f2750](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/b6f27507fab496aff666af909dae15553d03a6de))
+* move packages to match clean architecture ([f98e09c](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/f98e09cd228f8475052dedbf54f2994b2b5434c1))
+* remove useless logging ([6d95649](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/6d95649d3f105e57470b34be1d712e18121545e7))
+* singular name ([6ba8608](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/6ba8608846446517a3331ff906cbca6c0f7a3c91))
+* **test:** improve tests ([07bb7d8](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/07bb7d8b0ddfe15e18d2b40ce343af06c33d335a))
+
 ## [0.1.12](https://github.com/SmartOperatingBlock/kotlin-template-project/compare/0.1.11...0.1.12) (2023-11-24)
 
 

@@ -16,19 +16,29 @@
 
 package infrastructure.component
 
+import application.component.DTDManager
 import application.component.DTKGEngine
 import infrastructure.component.testdouble.WoTDTDManagerTestDouble
+import io.ktor.serialization.kotlinx.json.json
+import io.ktor.server.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.server.testing.ApplicationTestBuilder
 import io.ktor.server.testing.testApplication
 import io.ktor.server.websocket.WebSockets
 
 object KtorTestingUtility {
-    fun apiTestApplication(tests: suspend ApplicationTestBuilder.(dtkgEngine: DTKGEngine) -> Unit) {
+    fun apiTestApplication(
+        dtdManager: DTDManager = WoTDTDManagerTestDouble(),
+        tests: suspend ApplicationTestBuilder.(dtkgEngine: DTKGEngine) -> Unit,
+    ) {
         val dtkgEngine = JenaDTKGEngine()
         testApplication {
             install(WebSockets)
+            install(ContentNegotiation) {
+                json()
+            }
             application {
-                wodtDigitalTwinInterfaceAPI(dtkgEngine, WoTDTDManagerTestDouble())
+                wodtDigitalTwinInterfaceAPI(dtkgEngine, dtdManager)
+                platformManagementInterfaceAPI(BasePlatformManagementInterface(dtdManager, "uri"))
             }
             tests(dtkgEngine)
         }

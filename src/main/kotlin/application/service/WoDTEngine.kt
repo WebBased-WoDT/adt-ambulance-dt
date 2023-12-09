@@ -17,8 +17,10 @@
 package application.service
 
 import application.component.DTKGEngine
+import application.component.PlatformManagementInterface
 import application.component.WoDTShadowingAdapter
 import application.component.WoDTWebServer
+import entity.events.DeleteEvent
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 
@@ -29,6 +31,7 @@ import kotlinx.coroutines.launch
 class WoDTEngine(
     private val wodtShadowingAdapter: WoDTShadowingAdapter,
     private val dtkgEngine: DTKGEngine,
+    private val platformManagementInterface: PlatformManagementInterface,
     private val wodtWebServer: WoDTWebServer,
 ) {
     /**
@@ -36,7 +39,14 @@ class WoDTEngine(
      */
     suspend fun start() = coroutineScope {
         wodtShadowingAdapter.startShadowAdaptation()
-        launch { wodtShadowingAdapter.events.collect { dtkgEngine.updateDigitalTwinKnowledgeGraph(it) } }
+        launch {
+            wodtShadowingAdapter.events.collect {
+                dtkgEngine.updateDigitalTwinKnowledgeGraph(it)
+                if (it is DeleteEvent) {
+                    platformManagementInterface.signalDigitalTwinDeletion()
+                }
+            }
+        }
         wodtWebServer.start()
     }
 }

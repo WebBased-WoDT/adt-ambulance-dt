@@ -38,6 +38,8 @@ dependencies {
     implementation(libs.kotlin.coroutines)
     implementation(libs.kotlin.serialization.json)
     implementation(libs.kotlin.stdlib)
+    implementation(libs.ktor.client.core)
+    implementation(libs.ktor.client.cio)
     implementation(libs.ktor.server.core)
     implementation(libs.ktor.server.engine.netty)
     implementation(libs.ktor.server.websockets)

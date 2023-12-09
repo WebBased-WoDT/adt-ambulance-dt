@@ -26,7 +26,7 @@ ktor-server-test-host = { module = "io.ktor:ktor-server-test-host", version.ref 
 ktor-server-websockets = { module = "io.ktor:ktor-server-websockets", version.ref = "ktor" }
 logging = { module = "io.github.oshai:kotlin-logging-jvm", version = "5.1.1" }
 signalr = { module = "com.microsoft.signalr:signalr", version = "8.0.0" }
-sl4j = { module = "org.slf4j:slf4j-simple", version = "2.0.3" }
+sl4j = { module = "org.slf4j:slf4j-simple", version = "2.0.9" }
 wot-servient = { module = "io.github.sane-city:wot-servient", version.ref = "wot" }
 
 [bundles]

@@ -28,6 +28,8 @@ import entity.ontology.WoDTVocabulary
 import io.github.oshai.kotlinlogging.KotlinLogging
 import io.github.sanecity.wot.thing.Thing
 import io.github.sanecity.wot.thing.Type
+import io.github.sanecity.wot.thing.form.Form
+import io.github.sanecity.wot.thing.form.Operation
 import io.github.sanecity.wot.thing.property.ThingProperty
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
@@ -78,27 +80,45 @@ class WoTDTDManager(
                 dtClient.applySafeDigitalTwinOperation(null) {
                     getModel(it.metadata.modelId)
                 }
-            }?.let {
-                Json.decodeFromString<JsonObject>(it.dtdlModel)
+            }?.let { dtModelObject ->
+                Json.decodeFromString<JsonObject>(dtModelObject.dtdlModel)
                     .toThingBaseThingDescription(System.getenv(DIGITAL_TWIN_URI), ontology)
                     .setObjectType(Type(ontology.dtType))
-                    .addProperty(SNAPSHOT_DTD_PROPERTY, ThingProperty.Builder().setObservable(true).build())
-                    .setMetadata(
-                        mapOf(
-                            WoDTVocabulary.VERSION to VERSION,
-                            WoDTVocabulary.PHYSICAL_ASSET_ID to System.getenv(PA_ID),
-                            mutex.withLock {
-                                "links" to registeredPlatforms.map { platform ->
-                                    object {
-                                        val href = platform
-                                        val rel = WoDTVocabulary.REGISTERED_TO_PLATFORM
-                                    }
-                                }
-                            },
-                        ),
+                    .addProperty(
+                        SNAPSHOT_DTD_PROPERTY,
+                        ThingProperty.Builder()
+                            .setReadOnly(true)
+                            .setObservable(true)
+                            .build(),
                     )
+                    .setMetadata(buildDTDMetadata())
+                    .also {
+                        // Necessary considering that the wot-servient library when adding a property
+                        // to an ExposedThing resets in an unexpected way the forms.
+                        it.getProperty(SNAPSHOT_DTD_PROPERTY)
+                            .addForm(
+                                Form.Builder()
+                                    .addOp(Operation.OBSERVE_PROPERTY)
+                                    .setHref("ws://localhost:3000/dtkg")
+                                    .setSubprotocol("websocket")
+                                    .build(),
+                            )
+                    }
             }
         }
+
+    private suspend fun buildDTDMetadata() = mapOf(
+        WoDTVocabulary.VERSION to VERSION,
+        WoDTVocabulary.PHYSICAL_ASSET_ID to System.getenv(PA_ID),
+        mutex.withLock {
+            "links" to registeredPlatforms.map { platform ->
+                object {
+                    val href = platform
+                    val rel = WoDTVocabulary.REGISTERED_TO_PLATFORM
+                }
+            }
+        },
+    )
 
     private fun <R> DigitalTwinsClient.applySafeDigitalTwinOperation(
         defaultResult: R,

@@ -18,11 +18,14 @@ package infrastructure.component
 
 import application.component.DTDManagerReader
 import application.component.DTKGReader
+import application.component.PlatformManagementInterface
 import application.component.WoDTWebServer
+import io.ktor.serialization.kotlinx.json.json
 import io.ktor.server.application.Application
 import io.ktor.server.application.install
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
+import io.ktor.server.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.server.websocket.WebSockets
 
 /**
@@ -31,10 +34,14 @@ import io.ktor.server.websocket.WebSockets
 class KtorWoDTWebServer(
     private val dtkgReader: DTKGReader,
     private val dtdReader: DTDManagerReader,
+    private val platformManagementInterface: PlatformManagementInterface,
 ) : WoDTWebServer {
     override fun start() {
         embeddedServer(Netty, port = PORT) {
             install(WebSockets)
+            install(ContentNegotiation) {
+                json()
+            }
             dispatcher(this)
         }.start(wait = false)
     }
@@ -42,6 +49,7 @@ class KtorWoDTWebServer(
     private fun dispatcher(app: Application) {
         with(app) {
             wodtDigitalTwinInterfaceAPI(dtkgReader, dtdReader)
+            platformManagementInterfaceAPI(platformManagementInterface)
         }
     }
 

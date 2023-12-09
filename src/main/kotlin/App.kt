@@ -1,6 +1,7 @@
 import application.service.WoDTEngine
 import entity.ontology.ambulance.AmbulanceOntology
 import infrastructure.component.ADTWoDTShadowingAdapter
+import infrastructure.component.BasePlatformManagementInterface
 import infrastructure.component.JenaDTKGEngine
 import infrastructure.component.KtorWoDTWebServer
 import infrastructure.component.WoTDTDManager
@@ -30,9 +31,10 @@ fun main(): Unit = runBlocking {
     val woDTShadowingAdapter = ADTWoDTShadowingAdapter(ambulanceOntology)
     val dtkgEngine = JenaDTKGEngine()
     val dtdManager = WoTDTDManager(ambulanceOntology)
-    val wodtWebServer = KtorWoDTWebServer(dtkgEngine, dtdManager)
+    val platformManagementInterface = BasePlatformManagementInterface(dtdManager)
+    val wodtWebServer = KtorWoDTWebServer(dtkgEngine, dtdManager, platformManagementInterface)
 
-    val woDTEngine = WoDTEngine(woDTShadowingAdapter, dtkgEngine, wodtWebServer)
+    val woDTEngine = WoDTEngine(woDTShadowingAdapter, dtkgEngine, platformManagementInterface, wodtWebServer)
 
     woDTEngine.start()
 }

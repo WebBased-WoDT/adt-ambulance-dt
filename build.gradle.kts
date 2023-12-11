@@ -22,7 +22,7 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
 }
 
-group = "io.github.smartoperatingblock"
+group = "io.github.webbasedwodt"
 
 repositories {
     mavenCentral()

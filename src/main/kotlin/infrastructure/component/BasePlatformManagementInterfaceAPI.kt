@@ -18,9 +18,11 @@ package infrastructure.component
 
 import application.component.PlatformManagementInterface
 import application.presenter.api.PlatformRegistration
+import io.ktor.http.HttpStatusCode
 import io.ktor.server.application.Application
 import io.ktor.server.application.call
 import io.ktor.server.request.receive
+import io.ktor.server.response.respond
 import io.ktor.server.routing.Route
 import io.ktor.server.routing.post
 import io.ktor.server.routing.routing
@@ -39,4 +41,5 @@ private fun Route.registeredToPlatform(platformManagementInterface: PlatformMana
     post("/platform") {
         val platform = call.receive<PlatformRegistration>()
         platformManagementInterface.addPlatform(platform.self)
+        call.respond(HttpStatusCode.OK)
     }

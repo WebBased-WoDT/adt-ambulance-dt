@@ -1,3 +1,32 @@
+## [1.0.1](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.0.0...1.0.1) (2023-12-21)
+
+
+### Dependency updates
+
+* **deps:** update dependency io.github.oshai:kotlin-logging-jvm to v5.1.1 ([d3c053c](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/d3c053ce3da2ee71ccf249ea19d0420dc181e11e))
+* **deps:** update dependency io.github.oshai:kotlin-logging-jvm to v5.1.4 ([92dcbac](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/92dcbacb485136bba4ad9634e7a123a89185c86f))
+* **deps:** update dependency io.github.oshai:kotlin-logging-jvm to v6 ([ae4d90c](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/ae4d90c8472700376e4e0dd7322ef923900745a1))
+* **deps:** update dependency io.github.oshai:kotlin-logging-jvm to v6.0.1 ([355d893](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/355d893daaca5d129f36b7263189cc85ea135d4e))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.81 ([bfe8227](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/bfe82273f620eea41a1a5e5c6caffcb024dbdd95))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.82 ([f46934f](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/f46934ffe442b89e40887223f32e99de960067ec))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.83 ([994ab17](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/994ab176230b2e9a8f0b24b282366b6a4947e0a7))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.84 ([1d53818](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/1d53818ef80d6a4eb0e8cb196974cb1c6f6d053f))
+* **deps:** update ktor to v2.3.7 ([d748951](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/d748951f1e5cbff05dd9abe4fa2c51751ac7da28))
+* **deps:** update plugin com.gradle.enterprise to v3.16.1 ([b830162](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/b83016207eee9234032bab3249aab1f4eb07d81b))
+* **deps:** update plugin kotlin-qa to v0.57.0 ([7ce37e0](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/7ce37e03ac029b537f1e00b66c41362a61510947))
+
+
+### Bug Fixes
+
+* add ok status code response to platform registration ([7428119](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/7428119c4298fc75e32d5d2d100e11c5252cad6a))
+* fix http method in deletion request ([b4007d2](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/b4007d25f9dcf41ea99ffaf007afec2019d9131a))
+
+
+### General maintenance
+
+* update group name ([a75e5e4](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/a75e5e4d120a264fe210b678e68ea32169317d2f))
+* update README with usage and documentation info ([1a4753c](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/1a4753c01444ad6f0182f1c477a0042ba2673ee9))
+
 ## 1.0.0 (2023-12-09)
 
 

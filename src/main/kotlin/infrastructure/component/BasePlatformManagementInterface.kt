@@ -20,7 +20,7 @@ import application.component.DTDManager
 import application.component.PlatformManagementInterface
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.cio.CIO
-import io.ktor.client.request.get
+import io.ktor.client.request.delete
 import io.ktor.http.appendPathSegments
 import kotlinx.coroutines.coroutineScope
 import java.util.Collections
@@ -55,7 +55,7 @@ class BasePlatformManagementInterface(
         val dtUri = digitalTwinUri
         coroutineScope {
             platformSet.forEach {
-                httpClient.get(it) {
+                httpClient.delete(it) {
                     url {
                         appendPathSegments(dtUri)
                     }

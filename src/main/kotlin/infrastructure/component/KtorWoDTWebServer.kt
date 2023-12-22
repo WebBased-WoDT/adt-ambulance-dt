@@ -35,9 +35,19 @@ class KtorWoDTWebServer(
     private val dtkgReader: DTKGReader,
     private val dtdReader: DTDManagerReader,
     private val platformManagementInterface: PlatformManagementInterface,
+    exposedPort: Int? = null,
 ) : WoDTWebServer {
+    private val exposedPort: Int
+
+    init {
+        if (exposedPort == null) {
+            checkNotNull(System.getenv(EXPOSED_PORT_VARIABLE)) { "Please provide the exposed port" }
+        }
+        this.exposedPort = exposedPort ?: System.getenv(EXPOSED_PORT_VARIABLE).toInt()
+    }
+
     override fun start() {
-        embeddedServer(Netty, port = PORT) {
+        embeddedServer(Netty, port = this.exposedPort) {
             install(WebSockets)
             install(ContentNegotiation) {
                 json()
@@ -54,6 +64,6 @@ class KtorWoDTWebServer(
     }
 
     companion object {
-        private const val PORT = 3000
+        private const val EXPOSED_PORT_VARIABLE = "EXPOSED_PORT"
     }
 }

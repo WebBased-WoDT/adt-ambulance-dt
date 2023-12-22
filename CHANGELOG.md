@@ -1,3 +1,15 @@
+## [1.1.0](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.0.1...1.1.0) (2023-12-22)
+
+
+### Features
+
+* allow users to select the port where to expose services ([3eb0bb4](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/3eb0bb4efceeb2789bb58bdc0e148df597e80459))
+
+
+### General maintenance
+
+* update README environmental variables ([b372018](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/b372018ffa9c64736e51a677ab4d715de1b63716))
+
 ## [1.0.1](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.0.0...1.0.1) (2023-12-21)
 
 

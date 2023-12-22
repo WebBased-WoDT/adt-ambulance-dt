@@ -58,6 +58,7 @@ class WoTDTDManager(
         checkNotNull(System.getenv(ADT_DT_ID)) { "Please provide the Digital Twin ID on Azure Digital Twins" }
         checkNotNull(System.getenv(PA_ID)) { "Please provide the Physical Asset ID" }
         checkNotNull(System.getenv(DIGITAL_TWIN_URI)) { "Please provide the exposed Digital Twin URI" }
+        checkNotNull(System.getenv(EXPOSED_PORT_VARIABLE)) { "Please provide the exposed port" }
     }
 
     private val dtClient = DigitalTwinsClientBuilder()
@@ -99,7 +100,7 @@ class WoTDTDManager(
                             .addForm(
                                 Form.Builder()
                                     .addOp(Operation.OBSERVE_PROPERTY)
-                                    .setHref("ws://localhost:3000/dtkg")
+                                    .setHref("ws://localhost:${System.getenv(EXPOSED_PORT_VARIABLE)}/dtkg")
                                     .setSubprotocol("websocket")
                                     .build(),
                             )
@@ -139,6 +140,7 @@ class WoTDTDManager(
         private const val ADT_DT_ID = "AZURE_DT_ID"
         private const val PA_ID = "PHYSICAL_ASSET_ID"
         private const val DIGITAL_TWIN_URI = "DIGITAL_TWIN_URI"
+        private const val EXPOSED_PORT_VARIABLE = "EXPOSED_PORT"
         private const val VERSION = "1.0.0"
         private const val SNAPSHOT_DTD_PROPERTY = "snapshot"
 

@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.1...1.1.2) (2023-12-22)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-coroutines-core to v1.8.0-rc2 ([f776b37](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/f776b3701b48a9e1144e13249adf6c6c7b018aed))
+
 ## [1.1.1](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.0...1.1.1) (2023-12-22)
 
 

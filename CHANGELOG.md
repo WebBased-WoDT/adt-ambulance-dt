@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.0...1.1.1) (2023-12-22)
+
+
+### Bug Fixes
+
+* use exposed port also in snapshot websocket affordance ([68a41d4](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/68a41d42247be8433280acfb49a46614fe80a944))
+
 ## [1.1.0](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.0.1...1.1.0) (2023-12-22)
 
 

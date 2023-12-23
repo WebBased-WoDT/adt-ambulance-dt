@@ -1,7 +1,7 @@
 openapi: 3.0.0
 servers:
   - description: WoDT Digital Twin API - ADT implementation
-    url: http://localhost:<port>/
+    url: http://localhost:<port>
 info:
   description: This is the API of exposed by the WoDT Digital Twin
   version: 1.0.0

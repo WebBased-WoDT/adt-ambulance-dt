@@ -1,3 +1,15 @@
+## [1.1.4](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.3...1.1.4) (2023-12-23)
+
+
+### Documentation
+
+* add rest api documentation ([41938b3](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/41938b3c35fcbee9a5828494c46add3b8857a484))
+
+
+### Build and continuous integration
+
+* configure ci to deploy rest api documentation ([987fd44](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/987fd443358bdd69e54ad3e80776db434c3e4eee))
+
 ## [1.1.3](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.2...1.1.3) (2023-12-22)
 
 

@@ -1,0 +1,143 @@
+openapi: 3.0.0
+servers:
+  - description: WoDT Digital Twin API - ADT implementation
+    url: http://localhost:<port>/
+info:
+  description: This is the API of exposed by the WoDT Digital Twin
+  version: 1.0.0
+  title: WoDT Digital Twin API - ADT implementation
+  contact:
+    email: andrea.giulianelli4@studio.unibo.it
+  license:
+    name: Apache 2.0 License
+    url: 'https://www.apache.org/licenses/LICENSE-2.0'
+
+tags:
+  - name: Platform Management Interface API
+    description: This is the API exposed by the Platform Management Interface.
+  - name: WoDT Digital Twin Interface API
+    description: This is the API exposed by the WoDT Digital Twin Interface for Consumers.
+
+paths:
+  /dtkg:
+    get:
+      tags:
+        - WoDT Digital Twin Interface API
+      summary: obtain the current Digital Twin Knowledge Graph
+      operationId: getDigitalTwinKnowledgeGraph
+      description: obtain the current Digital Twin Knowledge Graph
+      responses:
+        '200':
+          description: the Digital Twin Knowledge Graph
+          content:
+            text/turtle:
+              schema:
+                type: string
+                example: |
+                  <http://example.com/dt>
+                    <https://healthcareontology.com/ontology#hasFuelLevel>
+                            "37.0"^^<http://www.w3.org/2001/XMLSchema#double> ;
+                    <https://healthcareontology.com/ontology#isBusy>
+                            true ;
+                    <https://smartcityontology.com/ontology#isApproaching>
+                            <intersection> .
+
+        '204':
+          description: the current Digital Twin Knwoledge Graph is empty
+
+  /dtd:
+    get:
+      tags:
+        - WoDT Digital Twin Interface API
+      summary: obtain the current Digital Twin Descriptor of the WoDT Digital Twin
+      operationId: getDigitalTwinDescriptor
+      description: obtain the current Digital Twin Descriptor of the WoDT Digital Twin
+      responses:
+        '200':
+          description: the Digital Twin Descriptor
+          content:
+            application/td+json:
+              schema:
+                example: |
+                  {
+                    "id": "http://localhost:3002/",
+                    "properties": {
+                        "fuelLevel": {
+                            "type": "string",
+                            "observable": true,
+                            "readOnly": true,
+                            "@type": "https://www.w3.org/2001/XMLSchema#double",
+                            "https://purl.org/wodt/domainPredicate": "https://healthcareontology.com/ontology#hasFuelLevel",
+                            "https://purl.org/wodt/augmentedInteraction": false
+                        },
+                        "rel_is_part_of_mission": {
+                            "type": "string",
+                            "observable": true,
+                            "readOnly": true,
+                            "@type": "https://healthcareontology.com/ontology#Mission",
+                            "https://purl.org/wodt/domainPredicate": "https://healthcareontology.com/ontology#isInMission"
+                        },
+                        "rel_is_approaching": {
+                            "type": "string",
+                            "observable": true,
+                            "readOnly": true,
+                            "@type": "https://smartcityontology.com/ontology#Intersection",
+                            "https://purl.org/wodt/domainPredicate": "https://smartcityontology.com/ontology#isApproaching"
+                        },
+                        "busy": {
+                            "type": "string",
+                            "observable": true,
+                            "readOnly": true,
+                            "@type": "https://www.w3.org/2001/XMLSchema#boolean",
+                            "https://purl.org/wodt/domainPredicate": "https://healthcareontology.com/ontology#isBusy",
+                            "https://purl.org/wodt/augmentedInteraction": false
+                        },
+                        "snapshot": {
+                            "forms": [
+                                {
+                                    "href": "ws://localhost:3002/dtkg",
+                                    "op": [
+                                        "observeproperty"
+                                    ],
+                                    "subprotocol": "websocket"
+                                }
+                            ],
+                            "type": "string",
+                            "observable": true,
+                            "readOnly": true
+                        }
+                    },
+                    "@type": "https://healthcareontology.com/ontology#Ambulance",
+                    "@context": "https://www.w3.org/2019/wot/td/v1",
+                    "https://purl.org/wodt/version": "1.0.0",
+                    "https://purl.org/wodt/physicalAssetId": "AM3030T",
+                    "links": []
+                  }
+        '204':
+          description: the current Digital Twin Descriptor is empty
+
+  /platform:
+    post:
+      tags:
+        - Platform Management Interface API
+      summary: notify the WoDT Digital Twin its registration to a WoDT Digital Twins Platform
+      operationId: registrationNotification
+      description: notify the WoDT Digital Twin its registration to a WoDT Digital Twins Platform
+      responses:
+        '200':
+          description: notification received and elaborated
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PlatformRegistration'
+        description: the WoDT Digital Twins Platform URL
+
+components:
+  schemas:
+    PlatformRegistration:
+      type: object
+      properties:
+        self:
+          type: string
+          example: http://localhost:4000

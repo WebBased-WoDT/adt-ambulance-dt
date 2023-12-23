@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.4...1.1.5) (2023-12-23)
+
+
+### Documentation
+
+* typo in the rest api doc ([3913308](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/39133084fb2bd33759a8b2685cb547aff6f62874))
+
 ## [1.1.4](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.3...1.1.4) (2023-12-23)
 
 

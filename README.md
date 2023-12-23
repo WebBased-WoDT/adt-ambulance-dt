@@ -25,9 +25,9 @@ If you want to run it via docker container:
    ```bash
     docker run ghcr.io/webbased-wodt/adt-ambulance-dt:latest
     ```
-    1. If you want to try the REST-API from the external you need to provide a port mapping to port 3000.
-    2. If you want to pass an environment file whose name is different from `.env` use the `--env-file <name>` parameter.
+   1. If you want to pass an environment file whose name is different from `.env` use the `--env-file <name>` parameter.
 
 ## Documentation
 - Check out the website [here](https://webbased-wodt.github.io/adt-ambulance-dt/)
 - Direct link to the *Code* documentation [here](https://webbased-wodt.github.io/adt-ambulance-dt/documentation/code-doc/)
+- Direct link to the *REST-API* documentation [here](https://webbased-wodt.github.io/adt-ambulance-dt/documentation/openapi-doc/)

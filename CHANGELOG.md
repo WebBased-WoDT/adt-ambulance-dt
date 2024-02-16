@@ -1,3 +1,47 @@
+## [1.1.6](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.5...1.1.6) (2024-02-16)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-coroutines-core to v1.8.0 ([6e09196](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/6e09196b098cc8a6fd1f343d90018c551cf0a1b0))
+* **deps:** update dependency com.azure:azure-identity to v1.11.2 ([fc5beb2](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/fc5beb2a969a103151bd978bd7555d5c538c397b))
+* **deps:** update dependency com.microsoft.signalr:signalr to v8.0.1 ([0e1c47a](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/0e1c47ad33c793c5a9b036b97e84812281ce5582))
+* **deps:** update dependency com.microsoft.signalr:signalr to v8.0.2 ([d4d9a70](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/d4d9a702191a542ce678573a3fd889e1d81c9ba3))
+* **deps:** update dependency gradle to v8.6 ([f31c60c](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/f31c60cb0c2099bc97c7048f7d4c5bcf7ac3e954))
+* **deps:** update dependency io.github.oshai:kotlin-logging-jvm to v6.0.2 ([4877a05](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/4877a05476300390eb2a5ce416ccea904206548c))
+* **deps:** update dependency io.github.oshai:kotlin-logging-jvm to v6.0.3 ([9e24850](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/9e24850f580a57e49b9aed3a7543e9776fe180c4))
+* **deps:** update dependency org.slf4j:slf4j-simple to v2.0.11 ([4204c7d](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/4204c7dc54d17563b8add8f2b6e145d44fcafef4))
+* **deps:** update dependency org.slf4j:slf4j-simple to v2.0.12 ([8b46574](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/8b465749c93eb96a7a409021282d930d5d96d640))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.85 ([9b10996](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/9b10996d95bdaef1340c1a935dacb3a01c170c41))
+* **deps:** update ktor to v2.3.8 ([c12310f](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/c12310f8247d6754209ad038368e91483dcafba8))
+* **deps:** update node.js to 20.11 ([c65ebb1](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/c65ebb167aae29d5da4e18c96ef92ba095f598d5))
+* **deps:** update plugin com.gradle.enterprise to v3.16.2 ([9fe4499](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/9fe4499ca313dd64d31088a14cff6ffe895db321))
+* **deps:** update plugin kotlin-qa to v0.57.1 ([ea06ea6](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/ea06ea66f1de7cd0794d17c6284f0ab703d7d93a))
+* **deps:** update plugin kotlin-qa to v0.58.0 ([0fa0926](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/0fa09264bc30f40f66609ebf853d697b167901c1))
+* **deps:** update plugin kotlin-qa to v0.59.0 ([4a3eb6e](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/4a3eb6e6f0002bdd1ba8df921e28f5af32ceaf8a))
+* **deps:** update plugin kotlin-qa to v0.59.1 ([d5bde2a](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/d5bde2ac906cb69a9937cebe1036b261deb39096))
+* **deps:** update plugin kotlin-qa to v0.60.1 ([8ae2264](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/8ae2264ad6a38042563285e22af6086af7cdd86b))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.17 ([6bbbdbb](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/6bbbdbb41404d8bbce7c38c290984d51d3071f75))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2 ([3cd6d46](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/3cd6d467424357866858d2ba58c36059a9bb5b1b))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.1 ([7fe6bc1](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/7fe6bc1683fa6380af458a48b4409f9205819e49))
+
+
+### Build and continuous integration
+
+* **deps:** update codecov/codecov-action action to v3.1.5 ([8fbdb9b](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/8fbdb9b9afccfd6da42125de5b6a3720aba05ff6))
+* **deps:** update codecov/codecov-action action to v3.1.6 ([2dc65cf](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/2dc65cffab6b587c6a0eeb49af92e587aae07410))
+* **deps:** update codecov/codecov-action action to v4 ([15a35bc](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/15a35bc1ec4cf178403df0ed26629b93a05cb6c2))
+* **deps:** update codecov/codecov-action action to v4.0.1 ([38050c3](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/38050c349f67cb57304f62fb331d811571d7e57d))
+* **deps:** update gradle/wrapper-validation-action action to v2 ([79a9fd5](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/79a9fd52890c9b5279ef52ffe5b110f469a42db0))
+* **deps:** update gradle/wrapper-validation-action action to v2.0.1 ([c8cb538](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/c8cb538207128dbc3e2ffa028623ef7142b498d0))
+* **deps:** update gradle/wrapper-validation-action action to v2.1.0 ([5a9c772](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/5a9c772525c1349bbb532ed42634249cb2e142d3))
+* **deps:** update gradle/wrapper-validation-action action to v2.1.1 ([ae2261c](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/ae2261c149ce0138928d50596ed0223d139c6f00))
+
+
+### General maintenance
+
+* update README ([07be308](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/07be308f1aa84fa54eb2c15ab53d60272a062759))
+
 ## [1.1.5](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.4...1.1.5) (2023-12-23)
 
 

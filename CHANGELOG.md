@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.6...1.1.7) (2024-02-17)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-serialization-json to v1.6.3 ([cfbcf66](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/cfbcf665f2e389fe6d4b949c9198f9e7b3fb27c4))
+
 ## [1.1.6](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.5...1.1.6) (2024-02-16)
 
 

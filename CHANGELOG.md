@@ -1,3 +1,23 @@
+## [1.1.8](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.7...1.1.8) (2024-03-06)
+
+
+### Dependency updates
+
+* **deps:** update dependency com.azure:azure-digitaltwins-core to v1.3.17 ([179d8ac](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/179d8acd6ee753b2770df0415ecacd3c5dab6b0e))
+* **deps:** update dependency com.azure:azure-identity to v1.11.3 ([9cf011a](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/9cf011a8dd2e50c57904d62b86c964e1ade8db98))
+* **deps:** update ktor to v2.3.9 ([00b2de1](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/00b2de14a7cbf3fa53b55746fb8d4d3415b7dec9))
+
+
+### Documentation
+
+* **deps:** update plugin dokka to v1.9.20 ([dadc57e](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/dadc57eba97d3811858df166cb8b927bcdff0920))
+
+
+### Build and continuous integration
+
+* **deps:** update codecov/codecov-action action to v4.0.2 ([20e1f46](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/20e1f46856b1fa0f8eccde7c112b91189a2b83b3))
+* **deps:** update codecov/codecov-action action to v4.1.0 ([82499c8](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/82499c850e5a112c38f7b73c7549fee8d460d516))
+
 ## [1.1.7](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.6...1.1.7) (2024-02-17)
 
 

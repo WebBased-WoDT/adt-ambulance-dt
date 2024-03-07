@@ -1,3 +1,10 @@
+## [1.1.9](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.8...1.1.9) (2024-03-07)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin:kotlin-stdlib to v1.9.23 ([3fb709b](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/3fb709b4c3056ce47454678baceff36fafc06058))
+
 ## [1.1.8](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.7...1.1.8) (2024-03-06)
 
 

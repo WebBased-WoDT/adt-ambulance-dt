@@ -1,3 +1,22 @@
+## [1.1.12](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.11...1.1.12) (2024-05-21)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin:kotlin-stdlib to v2 ([d90f36e](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/d90f36e5c6905f53947a79203af46f570fd925da))
+* **deps:** update dependency com.microsoft.signalr:signalr to v8.0.5 ([f681ebf](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/f681ebf43a6fb179d2562f8de856869897961f1b))
+* **deps:** update plugin com.gradle.enterprise to v3.17.3 ([f6fbc8b](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/f6fbc8bfd7df7e88908d8f24d05a8371d0454a49))
+* **deps:** update plugin kotlin-qa to v0.61.1 ([40e927b](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/40e927b391c9ffd4cec7bed65a4816422d992add))
+* **deps:** update plugin kotlin-qa to v0.62.0 ([b39c63c](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/b39c63c6308e748cd766aca72fa45fa49a07cf76))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.5 ([40bfa32](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/40bfa32db95719c9407e12f3b5a63a4c88fc23a5))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.6 ([1dad9e8](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/1dad9e8ab7f76a17b5f3e66c1ca04061c6433709))
+
+
+### Build and continuous integration
+
+* **deps:** update codecov/codecov-action action to v4.4.0 ([da79ef7](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/da79ef7a3e2db98a46ffb7c68e50a12672b88935))
+* **deps:** update codecov/codecov-action action to v4.4.1 ([9cd7db1](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/9cd7db1d1a39ac9e94a8ae58ff55cf4411c7c2ea))
+
 ## [1.1.11](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.10...1.1.11) (2024-05-11)
 
 

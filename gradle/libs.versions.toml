@@ -7,7 +7,7 @@ wot = "1.16-SNAPSHOT"
 [libraries]
 archunit = { module = "com.tngtech.archunit:archunit-junit5", version = "1.3.0" }
 azure-digital-twins = { module = "com.azure:azure-digitaltwins-core", version = "1.3.20" }
-azure-identity = { module = "com.azure:azure-identity", version = "1.12.2" }
+azure-identity = { module = "com.azure:azure-identity", version = "1.13.0" }
 jena = { module = "org.apache.jena:apache-jena-libs", version = "4.1.0" }
 kotest-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
 kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }

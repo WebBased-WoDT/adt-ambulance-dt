@@ -27,6 +27,14 @@ If you want to run it via docker container:
     ```
    1. If you want to pass an environment file whose name is different from `.env` use the `--env-file <name>` parameter.
 
+## Usage notes
+This Digital Twin runs on the Microsoft Azure Digital Twins cloud service. One main issue with Azure Digital Twins is the impossibility of modeling relationships with Digital Twins that live outside the Azure Digital Twins instance itself. The targets in Azure Digital Twins relationships must be valid IDs of Digital Twins that are managed under the same instance. 
+
+_The strategy followed in this prototype consists of creating a new Digital Twin (DT B) inside the instance for each target WoDT Digital Twin with which the original one (DT A) has a relationship in the ecosystem_. Hence, the Digital Twin created (DT B) is an internal representation of the external WoDT Digital Twin that can be linked to the original one.
+
+_Moreover, the URI of the interested WoDT Digital Twin (DT B) is set as a property due to the impossibility of setting a URI as the ID of a Digital Twin inside an Azure Digital Twins instance (creating an ```uri``` property in its model)._
+
+
 ## Documentation
 - Check out the website [here](https://webbased-wodt.github.io/adt-ambulance-dt/)
 - Direct link to the *Code* documentation [here](https://webbased-wodt.github.io/adt-ambulance-dt/documentation/code-doc/)

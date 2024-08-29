@@ -1,3 +1,12 @@
+## [1.1.16](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.15...1.1.16) (2024-08-29)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-serialization-json to v1.7.2 ([7327e27](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/7327e2710df925918ef88608d097a01606dd556b))
+* **deps:** update dependency com.azure:azure-digitaltwins-core to v1.3.23 ([433164b](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/433164b465c473c3428f075e2dd7ced6efee4421))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.100 ([bcf0e98](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/bcf0e9852d68c1c05b508b02bae37889017b450d))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.101 ([0196ad9](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/0196ad92498d2e4546f2f031843a8e33c28fdc56))
+
 ## [1.1.15](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.14...1.1.15) (2024-08-23)
 
 ### Dependency updates

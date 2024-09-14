@@ -1,3 +1,19 @@
+## [1.1.17](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.16...1.1.17) (2024-09-14)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-coroutines-core to v1.9.0 ([fa3f262](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/fa3f2625ac6df455e3ba67ede80f83323282492a))
+* **deps:** update dependency gradle to v8.10.1 ([e022d90](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/e022d90775556b9eb73d1d5b7dceef79dd22c2e4))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.102 ([3f422f0](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/3f422f00224f3d3e615da124b7e1c346b13b6c5e))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.103 ([eb04d6e](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/eb04d6e2af8dfea73b7a3fc209084c0431f01d4b))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.104 ([94c2c57](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/94c2c57ae5f5286a8b70f3e412d17f187a08ab2f))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.105 ([667c8fc](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/667c8fc313736148da27d3b63cf006e0545c9be6))
+* **deps:** update plugin com.gradle.enterprise to v3.18 ([c151ec1](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/c151ec12c8d0b2dd3e1c26d992ab7be9708d811a))
+* **deps:** update plugin com.gradle.enterprise to v3.18.1 ([22e14eb](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/22e14eb446bd07831c7bebd0b11aafa87d31b945))
+* **deps:** update plugin kotlin-qa to v0.66.0 ([6d40ce3](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/6d40ce3832f50ad7fdea84768c4cbf0a9271b78f))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.10 ([c842eb3](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/c842eb32352e0555d6fe09c0e552d41cf7f85b0b))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.12 ([218a75a](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/218a75aa1b08d80a53455eb2a73c885eccfa8c07))
+
 ## [1.1.16](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.15...1.1.16) (2024-08-29)
 
 ### Dependency updates

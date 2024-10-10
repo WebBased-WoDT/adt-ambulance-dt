@@ -1,3 +1,24 @@
+## [1.1.19](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.18...1.1.19) (2024-10-10)
+
+### Dependency updates
+
+* **core-deps:** update kotlin monorepo to v2.0.21 ([73ea001](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/73ea00164d6d63e220c5a71a2f579336d1ece32c))
+* **deps:** update dependency com.azure:azure-digitaltwins-core to v1.3.24 ([86b8155](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/86b81557e67473d9fa3e24b11d5b0b15b80d7f77))
+* **deps:** update dependency com.azure:azure-identity to v1.14.0 ([2e33d4d](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/2e33d4ddd1974a931c1e9659a129a177fe623f4d))
+* **deps:** update dependency com.microsoft.signalr:signalr to v8.0.10 ([79367ac](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/79367ac8f3e3b73328584adabeb4a5fef01b38ed))
+* **deps:** update dependency gradle to v8.10.2 ([f1219bb](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/f1219bb362383fa57b582844685fcf0b26591afc))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.108 ([c143946](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/c14394666f38d1c7263172a42007ee35f4472091))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.109 ([6a796f2](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/6a796f2a647cd6b7ff092fc021d8daa4a936e361))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.110 ([ff3696a](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/ff3696ae96ac027db136dc9676ce8a61acc53163))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.111 ([c54bb13](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/c54bb13729d5916816361617cacd9e02bd219abf))
+* **deps:** update node.js to 20.18 ([2f4d268](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/2f4d268c95d96f0fa7ce3e549a970267ed17450e))
+* **deps:** update plugin kotlin-qa to v0.66.1 ([068b5c6](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/068b5c633c001aaa3edaf6871e6bbd2ba367c417))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.13 ([237a433](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/237a43386e6bf9b2934a0751e25560ba1b40131b))
+
+### Build and continuous integration
+
+* **deps:** update codecov/codecov-action action to v4.6.0 ([d7afdae](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/d7afdaee83880b6f619ad6eb9d12f49930dc276d))
+
 ## [1.1.18](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.17...1.1.18) (2024-09-20)
 
 ### Dependency updates

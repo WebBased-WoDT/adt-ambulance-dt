@@ -16,7 +16,7 @@
 
 plugins {
     id("com.gradle.enterprise") version "3.18.2"
-    id("org.danilopianini.gradle-pre-commit-git-hooks") version "2.0.13"
+    id("org.danilopianini.gradle-pre-commit-git-hooks") version "2.0.15"
 }
 
 rootProject.name = "adt-ambulance-dt"

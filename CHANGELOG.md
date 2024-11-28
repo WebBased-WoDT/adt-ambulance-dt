@@ -1,3 +1,32 @@
+## [1.1.20](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.19...1.1.20) (2024-11-28)
+
+### Dependency updates
+
+* **core-deps:** update kotlin to v2.1.0 ([2e284ee](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/2e284ee43237f8faf68c220ea97905cf06cb8db5))
+* **deps:** update dependency com.azure:azure-digitaltwins-core to v1.3.25 ([c371456](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/c3714562aace68d81dd6cb3ae48cbd45885a731f))
+* **deps:** update dependency com.azure:azure-digitaltwins-core to v1.4.0 ([a0cd7c2](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/a0cd7c24eedac1024080a74f69d75d55ae90b62f))
+* **deps:** update dependency com.azure:azure-identity to v1.14.1 ([4302deb](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/4302deb4024eca2172fb056f1e356b8c1a2d9609))
+* **deps:** update dependency com.azure:azure-identity to v1.14.2 ([6dffc97](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/6dffc97c6ec4556690645b606b633bcdcac7e622))
+* **deps:** update dependency com.microsoft.signalr:signalr to v8.0.11 ([edb5eec](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/edb5eecd6964dfccaa6ee087506ce7a34be7f611))
+* **deps:** update dependency io.ktor:ktor-server-test-host to v2.3.13 ([9ef43c1](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/9ef43c1d9e9a1d8e5ffb994adfdd121513522470))
+* **deps:** update dependency org.apache.jena:apache-jena-libs to v5.2.0 ([53d7343](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/53d7343e9089d8ef685c31e73284a600fb1c5ddd))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.112 ([a1618ff](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/a1618ffdf53bf7a3b9a8748330f10fcd885add04))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.113 ([e5f181c](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/e5f181c39b09d576b514b166f20013b53385ca6b))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.114 ([ea3ae7e](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/ea3ae7e3fd8d1484c4d0df1f52f1ed44bee9df4e))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.115 ([f3767b0](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/f3767b06d614b9847eac405629237b1ff5cedcdc))
+* **deps:** update node.js to v22 ([cc67d2b](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/cc67d2bf3cd86df183129008fce61ae3ae24b269))
+* **deps:** update plugin com.gradle.enterprise to v3.18.2 ([6d59d05](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/6d59d05913a546a5f08c456035ea9e83d2ddbfd9))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.15 ([3fda6d6](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/3fda6d6a5a37925f29b97c6357d76ef4047144fe))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v4.1.0 ([9e24e49](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/9e24e49d85aeecc138850b834d4d6b60d81abe36))
+* **deps:** update codecov/codecov-action action to v5 ([a1dda6a](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/a1dda6aba321910b44db783ddd1f5107402f9d02))
+* **deps:** update codecov/codecov-action action to v5.0.2 ([ed4525a](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/ed4525ad526028428fa65de0421a0a2ba0d0b9ae))
+* **deps:** update codecov/codecov-action action to v5.0.3 ([616f65b](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/616f65bb6917ad90d941f02545931c628c8ca502))
+* **deps:** update codecov/codecov-action action to v5.0.6 ([248924a](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/248924a98b77bc4b34198def47b8938cc9d6cc8e))
+* **deps:** update codecov/codecov-action action to v5.0.7 ([ddc085c](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/ddc085c719b6d286f56e39b4b1f6fd198057cf58))
+
 ## [1.1.19](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.18...1.1.19) (2024-10-10)
 
 ### Dependency updates

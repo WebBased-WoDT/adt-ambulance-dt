@@ -1,3 +1,23 @@
+## [1.1.21](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.20...1.1.21) (2024-12-20)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-coroutines-core to v1.10.0 ([f3499e0](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/f3499e0f2942ec3ba6236a340b4313b4f276c1a7))
+* **deps:** update alpine docker tag to v3.21 ([fb63943](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/fb6394385fbe51f35a3b3660994acff12272607b))
+* **deps:** update dependency io.github.oshai:kotlin-logging-jvm to v7.0.3 ([d1d6264](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/d1d626444aaa8ed11c91136cfd30bf953d09f240))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.116 ([ed15461](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/ed15461cc506298653d97fb0cd9a43c59af7fe7f))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.117 ([4c718d4](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/4c718d45fec6efcf5dc8ad8b535f1117e8a823be))
+* **deps:** update node.js to 22.12 ([6869fa7](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/6869fa7163756c7fde8d3d11dd00bc9bf1bbdbba))
+* **deps:** update plugin com.gradle.enterprise to v3.19 ([3f28c1f](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/3f28c1fbc4dd88c4144bcf211af022fa7295c89c))
+* **deps:** update plugin dokka to v2 ([ac7e2a8](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/ac7e2a82d668d261e8f039e23eb307ae4717514e))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.17 ([eff935d](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/eff935dbbd7beda1af58fd59d45e3e9f9e292f50))
+
+### Build and continuous integration
+
+* **deps:** update codecov/codecov-action action to v5.1.0 ([488a9bb](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/488a9bb1da46a74de4a2f1bb80b1aacb9152d9ec))
+* **deps:** update codecov/codecov-action action to v5.1.1 ([39ede34](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/39ede3489acb3578435d9deebb89a8aa9c060a42))
+* **deps:** update codecov/codecov-action action to v5.1.2 ([5404dba](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/5404dbaeb3c842e11fd416b7389f16524dea0804))
+
 ## [1.1.20](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.19...1.1.20) (2024-11-28)
 
 ### Dependency updates

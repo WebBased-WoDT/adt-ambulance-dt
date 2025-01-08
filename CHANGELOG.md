@@ -1,3 +1,12 @@
+## [1.1.23](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.22...1.1.23) (2025-01-08)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-serialization-json to v1.8.0 ([b034ef1](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/b034ef13e2cd387eeffbf6c741b116eb02c3f4f3))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.118 ([3117fb6](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/3117fb6ef381b56461bae28c7180e9bb8750f2a5))
+* **deps:** update node.js to 22.13 ([0890090](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/08900902d1ec763d728ac5203b8012b08ccee354))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.18 ([fe1657b](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/fe1657bd519844c037e2954d8a973fd60c6fc46a))
+
 ## [1.1.22](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.21...1.1.22) (2024-12-21)
 
 ### Dependency updates

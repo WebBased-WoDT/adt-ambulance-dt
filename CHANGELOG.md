@@ -1,3 +1,21 @@
+## [1.1.24](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.23...1.1.24) (2025-01-27)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlin:kotlin-stdlib to v2.1.10 ([dffe46e](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/dffe46e0fcaf71de882c56cfabbf1faacc53fb00))
+* **deps:** update dependency com.azure:azure-identity to v1.15.0 ([f0e9463](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/f0e94630ada153208fc46c2f059f9f02ba3f1e2c))
+* **deps:** update dependency com.microsoft.signalr:signalr to v8.0.12 ([9cc5293](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/9cc5293dbdb968c3a25c34a9c95f804e6253715d))
+* **deps:** update dependency com.microsoft.signalr:signalr to v9 ([f240e49](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/f240e499ed0bf06bb4cfc89456994196eaedfc15))
+* **deps:** update dependency org.apache.jena:apache-jena-libs to v5.3.0 ([d02df45](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/d02df453121dfd5385da71b5c3cb3d34c70a29f3))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.119 ([8e78af2](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/8e78af2f721955a0fa5092b4b30022f1a2af7cac))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v4.2.0 ([fea2aeb](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/fea2aebdf4d5531981f8e00b9740522209789def))
+* **deps:** update codecov/codecov-action action to v5.2.0 ([377b8d8](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/377b8d87c4078e8291c92edb8bd474488f03f630))
+* **deps:** update codecov/codecov-action action to v5.3.0 ([614c980](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/614c9808bef158530a948b527675f7a3fa5956dd))
+* **deps:** update codecov/codecov-action action to v5.3.1 ([fda3674](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/fda3674f01cbd5550c7984c44b8e9f0fe1961b5b))
+
 ## [1.1.23](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.22...1.1.23) (2025-01-08)
 
 ### Dependency updates

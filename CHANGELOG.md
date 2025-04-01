@@ -1,3 +1,12 @@
+## [1.1.26](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.25...1.1.26) (2025-04-01)
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-serialization-json to v1.8.1 ([9b068df](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/9b068df4475544c2cdeda18cff4055dda0a76e0f))
+* **deps:** update dependency com.azure:azure-digitaltwins-core to v1.4.2 ([a8444af](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/a8444af24cdde24c8b0dc809d19d2c42aea971fa))
+* **deps:** update dependency io.github.oshai:kotlin-logging-jvm to v7.0.6 ([2f6d5b2](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/2f6d5b269bb101a0e67c990bdcd714f1a4362239))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.22 ([e47015f](https://github.com/WebBased-WoDT/adt-ambulance-dt/commit/e47015f72ffaf49ead40741abc741a2d98279320))
+
 ## [1.1.25](https://github.com/WebBased-WoDT/adt-ambulance-dt/compare/1.1.24...1.1.25) (2025-03-20)
 
 ### Dependency updates

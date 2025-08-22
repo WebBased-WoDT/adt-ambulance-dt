@@ -1,7 +1,7 @@
 [versions]
 kotlin = "2.1.21"
 kotest = "6.0.0"
-ktor = "2.3.13"
+ktor = "3.2.3"
 wot = "1.16-SNAPSHOT"
 
 [libraries]
